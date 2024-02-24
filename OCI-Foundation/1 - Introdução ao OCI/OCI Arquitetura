@@ -1,0 +1,26 @@
+Arquitetura OCI
+
+    Regiões
+        Área geográfica localizada composta de um ou mais AD (domínios de disponibilidade)
+
+        A maioria dos países possuem pelo menos dois data centers
+
+        Possuem Regiões Pares
+
+    Domínios de disponibilidade (AD - Availability Domains)
+        São um ou mais data centers tolerantes a falhas, localzados em uma região e conectados uns aos outros por uma rede de baixa latência e alta largura de banda
+
+        São isolados uns dos outros e tolerantes a falhas, a infraestrutura não é compartilhada
+
+    Domínios de falha (FD - Fault Domains)
+        Agrupamento de hardware e infraestrutura dentro de um domínio de disponibilidade
+
+        Cada domínio de disponibilidade possuem 3 domínios de falha. Os FDs são como data centers lógicos dentro do AD
+
+    A OCI possui uma parceria multicloud com a Microsoft Azure e uma nuvem híbrida chamada chamada Dedicated Region Cloud@Customer
+
+    Escolha de uma região
+        Para escolher uma região, deve-se ser analisado:
+            Local: região mais perto dos usuários para ter uma baixa latência e alta performance
+            Residência de dados e Conformidade: Alguns países possuem requisitos rigorosos de residência de dados
+            Disponbilidade do serviço
