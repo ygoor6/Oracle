@@ -1,0 +1,29 @@
+OCI Distributed Cloud
+
+    Os serviços OCI são distribuídos e os clientes podem obtê-los de diversas maneiras, sendo elas:
+
+        - Cloud Pública: Acesso aos serviços em mais de 41 regiões
+        - Cloud Híbrida: Exadata Cloud@Customer
+        - Cloud Dedicada: Nuvem e região dedicada para o cliente
+        - Multicloud: Serviços Oracle sendo executados em outros providers (Oracle Database for Azure, Oracle Interconnect for Azure e Oracle MySQL Heatwave on AWS)
+
+        Região Dedicada - Cloud@Customer
+            Todos os serviços sendo executados no datacenter do cliente
+            Instalado, operado, suportado e atualizado pela Oracle em cada Região Dedicada da mesma maneira das clouds públicas
+        
+        Oracle Cloud VMware Solution
+            VMWare nativo na cloud pública OCI ou em regiões dedicadas
+
+        Autonomous DB no Exadata Cloud@Customer
+            Recursos avançados do Autonomous DB disponíveis no ambiente local do cliente
+
+        Roving Edge Infrastructure
+            Servidor portátil, otimizado para computação, armazenamento para operar em ambientes remotos
+
+        OCI-Azure Interconnect
+            Os prividers Oracle e Microsoft possuem uma interconexão privada em execução entre as duas clouds
+            Provê baixa latência <2ms
+            A cobrança é realizada por circuito provisionado (em ambos lados) e não há cobrança pela largura de banda
+
+        Oracle Database Service for Azure
+            Serviço de banco de dados gerenciado pela Oracle que possui automação na integração desde a interconexão até a configuração de identidade com a Azure

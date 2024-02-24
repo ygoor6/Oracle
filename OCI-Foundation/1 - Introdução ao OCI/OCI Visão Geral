@@ -1,0 +1,44 @@
+OCI Visão Geral
+
+    Oracle Cloud Infrastructure Glocal Locations
+    - 49 regiões
+    - 12 regiões com conexão a Azure (suporte multicloud)
+
+    Principais serviços
+        - Computação
+            VMs, bare metal, CPUs, GPUs
+
+        - Containers
+            Kubernetes, Registros
+
+        - SO e Vmware
+            Linux, gerenciamento de SO, marketplace
+
+        - Armazenamento
+            NVMe, Block, File, Archive, Objeto, Migração de dados
+
+        - Redes
+            VCN, Load Balancer, Service Gateway, VPN
+
+        - Banco de dados 
+            Bancos de dados autônomos, Exadata
+            Bancos de dados Open-source (NoSQL, MySQL)
+
+        - Dados e Inteligência Artificial
+            Big Data, Data Flow, Data Integration (ETL), Golden Gate
+            Serviços de IA (ciência de dados, assistente digital)
+            Mensagem (streaming, filas e conectores)
+
+        - Governança e Administração
+            Cloud Ops (IAM, Console, Cost Advisor)
+            Segurança (Cloud Guard, Zonas de Segurança, Vault, DDoS, WAF)
+            Observabilidade (Monitoria, Log, Análise de logs, eventos)
+
+        - Desenvolvimento
+            Low Code (APEX, serviço gerenciado para desenvolvimento)
+            AppDev
+            Iac (Resource Manager, Terraform, Ansible)
+
+        - Aplicações
+            Serverless (Eventos, Functions, API Gateway)
+            App Integration
