@@ -1,0 +1,43 @@
+IAM - Identity and Access Management (Gerenciamento de Identidade e Acesso)
+
+    Serviço de gerenciamento de acesso, funciona como um refinado controle de acesso ou controle de acesso baseado em atribuição.
+
+    Possui dois aspectos:
+        AuthN: Autenticação, lida com identidade identidade do usuário (é quem diz ser)
+        AuthZ: Autorização, lida com a permissão do usuário
+
+    Conceitos de identidade OCI
+            
+            Domínios de identidade
+                É um contêiner para seus usuários e grupos, representa uma população de usuários no OCI e as configurações associadas
+
+            Usuários
+
+
+            Grupos
+                Coleção de usuários que têm o mesmo requisito de acesso a recursos
+
+            Políticas
+                Regra criadas que definem permissões granulares, podem ser anexadas à compartimentos ou a um Tenancy. Caso seja anexada ao Tenancy, todos abaixo herdarão a política. Se for aplicado a um compartimento, aplicará somente aos recursos.
+
+                Não é possível definir políticas para usuários de maneira individual, sempre são operados a nível de grupos
+
+                Na sintaxe da política, temos os verbos:
+                    Gerenciar: possível gerenciar todos os recursos
+                    Usar: possível ler, mas não atualizar ou excluir
+                    Leitura: possível ler
+                    Inspeção: Listar os recursos
+
+            Grupos Dinâmicos
+
+            Recursos
+                Todos os objetos criados na nuvem (VMs, armazenamento, redes, bancos de dados) são recursos. Todos os recursos possuem um identificador único criado automaticamente chamado OCID - Oracle Cloud ID
+
+            Compartimentos
+                Funcionalidade exclusiva no OCI que é uma construção lógica em que pode manter os recursos na nuvem. Pode ser criado de maneira isolada e com controle de acesso (exemplo: compartimento de redes, apresentar apenas recursos de redes).
+
+                Ao criar o Tenancy, é criado um compartimento raiz (root) que abranje todos os compartimentos
+
+                Cada recurso pertence a apenas um compartimento, ou seja, uma máquina no compartimento A, só pode existir no compartimento B se for movida ou excluída e recriada
+
+                São globais, logo recursos de várias regiões podem estar no mesmo compartimento
