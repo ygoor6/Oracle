@@ -1,0 +1,39 @@
+VCN - Virtual Cloud Network
+    É uma uma rede virtual privada criada na OCI.
+
+    Se trata de um serviço regional de alta disponibilidade, escabalibidade e segurança.
+
+    Todo VCN possui um espaço de endereço, indicado em uma notação CIDR (ex.: 10.0.0.0/16). Sendo assim, é possível dividi-lô em redes menores, chamadas subnet (sub-rede).
+
+    Comunicação
+        Internet Gateway: usado para comunicação com a internet em comunicação biderecional.
+        
+        NAT Gateway: serviço de NAT oferecido, sendo o tráfego unidirecional. O fluxo seguiria da sub-redes privadas para a internet, não sendo possível o usuário utilizá-lo com origem da internet para as sub-redes privadas.
+
+        Service Gateway: permite que os recursos do VCN acessem serviços públicos do OCI sem usar NAT ou Internet Gateway.
+
+        Dynamic Routing Gateway: fornece comnicação com o ambiente on-premises e internet, por meio do FasConnect (serviço AWS Direct Connect e Azure Express Route) e Site-to-Site VPN Connect.
+
+        Dynamic Routing Gateway v2: recurso que permite a comunicação entre várias VCNs em uma mesma região, podendo abrigar até 300 VCNs em um único DRG.
+
+    Roteamento
+        Route Table: tabela usada pela VCN para enviar o tráfego para a internet, on-premises ou outras VCNs pareadas (peering). A tabela de roteamento consiste em um conjunto de regras de roteamento, cada regra especifica um bloco de CIDR e um destino de roteamento (próximo salto/next-hop).
+
+            Verifica o CIDR mais específico ou com prioridade para realizar o roteamento.
+
+        Peering
+            Local Peering Gateway: redes na mesma região, podem se comunicar através de um peering local.
+
+            Remote Peering: rede em regiões de data center OCI diferentes, podem sem comunicar através de um peering remoto utilizando o Dynamic Routing Gateway.
+
+        Segurança
+            istas de Segurança: atua como uma lista de regras de firewall associadas a uma sub-rede, que especifica o tráfego de entrada e saída permitido ou bloqueado.
+
+            Network Security Group (NSG): atua como uma lista de regras de firewall associadas a uma ou conjunto de NICs (placas de interface de rede). Os NSGs podem ter origem ou destino nas regras.
+
+        Balanceador de Carga
+            Balanceadores de carga podem ser utilizados com a finalidade de obter alta disponibilidade e escalabilidade.
+
+            Layer 7 LB (camada aplicação): atua na camada 7 do modelo OSI, sendo capaz de interpretar chamadas HTTP ou HTTPS
+
+            Network Load Balancer (camada de rede): atua na camada 4 do modelo OSI, sendo capaz de interpretar TCP, UDP e ICMP.
